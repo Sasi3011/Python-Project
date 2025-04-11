@@ -20,3 +20,9 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+from django.urls import path
+from irrigation_project.views import IrrigationDecision
+
+urlpatterns = [
+    path('api/irrigate/', IrrigationDecision.as_view()),
+]
